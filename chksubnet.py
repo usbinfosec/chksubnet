@@ -57,9 +57,9 @@ def ToIPv4CIDR(addr,bits):
 		# Xor out the high order bits, leaving the bits lower bits
 		x=0xffffffff^bits
 
-		# Only count the lower order bits (most CIDRs will be 16 or higher
+		# Only count the lower order bits (most CIDRs will be 16 or higher)
 		# therefore there should be a savings in looping when evaluating a large
-		# number of 16 through 32 bit masks. If the masks are 0 to 16, we ending
+		# number of 16 through 32 bit masks. If the masks are 0 to 16, we
 		# end up spending more time looping though.
 		bds=0
 		while x > 0:
